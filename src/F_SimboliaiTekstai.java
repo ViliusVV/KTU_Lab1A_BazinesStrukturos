@@ -182,7 +182,8 @@ public class F_SimboliaiTekstai {
      */
     // Visos imanomos raidziu kombinacijos
     void met9VisiImanomi(String zodis, int prad, int pab){
-        System.out.println("===== metodas9 Visos kombinacijos... ");
+        if(prad == 0) 
+            System.out.println("===== metodas9 Visos kombinacijos... ");
         if (prad == pab) 
             System.out.printf("%s%n", zodis); 
         else
@@ -198,7 +199,9 @@ public class F_SimboliaiTekstai {
                 sb.setCharAt(i, zodis.charAt(prad)); 
                 zodis = sb.toString();
             } 
-        } 
+        }
+        if(prad == 0)
+            System.out.println("Patikrinkite, ar tokių rezultatų tikėjotės ??\n");
     }
 // -----------------------------------------------------------------------------
     public static void main(String[] args) {

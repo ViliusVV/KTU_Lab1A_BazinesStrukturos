@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /** @author Eimutis Karčiauskas, KTU IF Programų inžinerijos katedra, 2010 08 28
  * 
  * Sukuriami klasių Klijentas objektai. Imituojami Lietvoje žinomų bankų kodai.
@@ -14,8 +17,9 @@ public class KlientuRinkinys {
     void metodoParinkimas(){
         System.out.println("****** Klasė KlijentuRinkinys **********");
         met1PavieniaiKlientai();
-//        met2KlientųMasyvas();
-//        met3GeneruojamasKlientųMasyvas();
+        met2KlientųMasyvas();
+        met3GeneruojamasKlientųMasyvas();
+        met4SumaPagalAmziu(25);
     }
 // -----------------------------------------------------------------------------
     /**
@@ -115,9 +119,23 @@ public class KlientuRinkinys {
     /**
      * Suformuokite papildomus metodus, panaudojant klasės Klijentas objektus.
      */
-    void met4(){
-        System.out.println("===== metodas4 ... ");
-
+    void met4SumaPagalAmziu(int amzius){
+        System.out.println("===== metodas4 Suma pagal amziu\natspausdina vidutine suma pagal amziu... ");
+        Random r = new Random();
+        Klientas[] clients =new Klientas[100];
+        double acummulator = 0.0;
+        int kCount = 0;
+        for(Klientas k: clients)
+        {
+            k=new Klientas("FABAX" + r.nextInt(999999),r.nextInt(25)+21, r.nextInt(10000)/10.0);
+            if (k.getAmžius() == amzius)
+            {
+                acummulator += k.getIndėlis();
+                kCount++;
+            }
+        }
+        double avg = acummulator / kCount;
+        System.out.printf("Klientai kuriu amzius yra %d, vidutiniskai turi %s\n", amzius, avg);
         System.out.println("Patikrinkite, ar tokių rezultatų tikėjotės ??\n");
     }
     public static void main(String[] args) {

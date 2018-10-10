@@ -16,10 +16,11 @@ public class I_LokalesLietuvybe {
      */
     void metodoParinkimas(){
         System.out.println("****** Klasė J_LokalesLietuvybe **********");
-        met1LietuviškiŽodžiai();
+//        met1LietuviškiŽodžiai();
 //        met2LokalizuotasSkaičiųPateikimas();
 //        met3LokalizuotasSkaičiųSkaitymas();
-//        met4GalimosLokalės();
+        //met4GalimosLokalės();
+        met5();
     }
 // -----------------------------------------------------------------------------
 /**
@@ -107,11 +108,11 @@ public class I_LokalesLietuvybe {
         System.out.println("===== metodas4 Analizuojame Galimas Lokales");
           Locale[] locales = Locale.getAvailableLocales();
           for (Locale loc : locales) {
-          System.out.printf("%-3s %-18s %-12s %-8s %-8s \n",
+          System.out.printf("%-3s %-18s %-12s %-8s \n",
                   loc.getCountry(),
                   loc.getDisplayCountry(),
                   loc.getDisplayLanguage(),
-                  loc.getISO3Country(),
+                  //loc.getISO3Country(),
                   loc.getISO3Language()
                   );
         }
@@ -123,7 +124,14 @@ public class I_LokalesLietuvybe {
      */
     public void met5(){
         System.out.println("===== metodas5 ... ");
-
+        System.out.println("===== metodas4 Atspausdinamos galimos lokales");
+        Locale[] locales = Locale.getAvailableLocales();
+        for (Locale loc : locales)
+        {
+             System.out.printf("Locale.%-15s %15s %15s \n",loc.toString(),
+                    loc.getDisplayLanguage(),
+                    loc.getDisplayCountry());
+        }
         System.out.println("Patikrinkite, ar tokių rezultatų tikėjotės ??\n");
     }
 // -----------------------------------------------------------------------------
