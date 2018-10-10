@@ -33,6 +33,7 @@ public class G_MasyvuEtiudai {
         met3DvimatisMasyvas();
        met4MasyvaiKartu();
        met5MėnesiųDienos();
+       met6SMarkesSuModeliais();
     }
  // -----------------------------------------------------------------------------
    /**
@@ -126,18 +127,15 @@ public class G_MasyvuEtiudai {
     /**
      * Sukuriate savo pasirinktus masyvus ir atliekate operacijas su jais
      */
-    void met6(){
-        System.out.println("===== metodas6 ... ");
-
-        System.out.println("Patikrinkite, ar tokių rezultatų tikėjotės ??\n");
-    }
-// -----------------------------------------------------------------------------
-    /**
-     * Sukuriate savo pasirinktus masyvus ir atliekate operacijas su jais
-     */
-    void met7(){
-        System.out.println("===== metodas7 ... ");
-
+    void met6SMarkesSuModeliais(){
+        System.out.println("===== metodas6 Markes su modeliais.... ");
+        for(int i = 0; i < automarkės.length; i++)
+        {
+            for (String item : automodeliai[i]) {
+                System.out.printf("%s %s,", automarkės[i], item);
+            }
+            System.out.println("");
+        }
         System.out.println("Patikrinkite, ar tokių rezultatų tikėjotės ??\n");
     }
 // -----------------------------------------------------------------------------
