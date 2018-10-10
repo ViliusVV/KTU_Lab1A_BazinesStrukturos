@@ -15,6 +15,7 @@ public class F_SimboliaiTekstai {
      * Demonstravimui reikalingiems metodams komentarai yra nuimami.
      * Laikinai nereikalingiems - komentarai yra uždedami.
      */
+    
 // -----------------------------------------------------------------------------
     void metodoParinkimas(){
         System.out.println("****** Klasė G_SimboliaiTekstai **********");
@@ -25,7 +26,6 @@ public class F_SimboliaiTekstai {
 //        met5StringTokenizer();
 //        met6Scanner();
         met8GeneruotiPalindroma(5);
-        met8GeneruotiPalindroma(10);
         met9VisiImanomi("BAC", 0, 2);
     }
 // -----------------------------------------------------------------------------
@@ -161,8 +161,9 @@ public class F_SimboliaiTekstai {
     /**
      * Atliekate savo pasirinktus demo skaičiavimus su tekstais ir simboliais
      */
+    // Sugeneruoja nurodyto dydzio atsitiktini palindroma
     void met8GeneruotiPalindroma(int ilgis){
-        System.out.println("===== metodas8 ... ");
+        System.out.println("===== metodas8 Palindromas... ");
         Random rand = new Random();
         StringBuilder random = new StringBuilder(ilgis);
         for (int i = 0; i < (int)Math.ceil((double)ilgis/2); i++) {
@@ -181,7 +182,7 @@ public class F_SimboliaiTekstai {
      */
     // Visos imanomos raidziu kombinacijos
     void met9VisiImanomi(String zodis, int prad, int pab){
-        //System.out.println("===== metodas9 ... ");
+        System.out.println("===== metodas9 Visos kombinacijos... ");
         if (prad == pab) 
             System.out.printf("%s%n", zodis); 
         else
