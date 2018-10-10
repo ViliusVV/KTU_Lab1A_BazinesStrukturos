@@ -179,6 +179,7 @@ public class F_SimboliaiTekstai {
     /**
      * Atliekate savo pasirinktus demo skaičiavimus su  tekstais ir simboliais
      */
+    // Visos imanomos raidziu kombinacijos
     void met9VisiImanomi(String zodis, int prad, int pab){
         //System.out.println("===== metodas9 ... ");
         if (prad == pab) 
