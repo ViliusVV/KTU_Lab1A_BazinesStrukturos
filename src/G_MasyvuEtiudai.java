@@ -125,7 +125,7 @@ public class G_MasyvuEtiudai {
     }
 // -----------------------------------------------------------------------------
     /**
-     * Sukuriate savo pasirinktus masyvus ir atliekate operacijas su jais
+     *  Sukuriate savo pasirinktus masyvus ir atliekate operacijas su jais
      */
     void met6SMarkesSuModeliais(){
         System.out.println("===== metodas6 Markes su modeliais.... ");
